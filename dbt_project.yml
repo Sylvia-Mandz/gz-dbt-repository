@@ -44,9 +44,7 @@ models:
 models:
   'greenweez-project':           # project name
     mart: 
-      materialized:      # all models in folder mart --> materialized as tables
-        table                 
-      intermediate:
+      +materialized:      # all models in folder mart --> materialized as tables
         table
-      staging:
-        table    # schema allows to create a seperate dataset for all models inside finance folder
+      +finance:
+        schema: finance_days
