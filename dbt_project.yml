@@ -40,3 +40,13 @@ models:
     # Applies to all files under models/example/
     example:
       +materialized: table
+
+models:
+  'greenweez-project':           # project name
+    mart: 
+      materialized:      # all models in folder mart --> materialized as tables
+        table                 
+      intermediate:
+        table
+      staging:
+        table    # schema allows to create a seperate dataset for all models inside finance folder
